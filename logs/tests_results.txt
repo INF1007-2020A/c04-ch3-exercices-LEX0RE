@@ -14,7 +14,7 @@ Traceback (most recent call last):
     output = [exercice.to_degrees(v) for v in values]
   File "test_exercice.py", line 80, in <listcomp>
     output = [exercice.to_degrees(v) for v in values]
-  File "/home/runner/work/c04-ch3-exercices-LEX0RE/c04-ch3-exercices-LEX0RE/exercice.py", line 26, in to_degrees
+  File "/home/runner/work/c04-ch3-exercices-LEX0RE/c04-ch3-exercices-LEX0RE/exercice.py", line 25, in to_degrees
     minutes = (math.degrees(angle_rads) - degres).floor(2) * 60
 AttributeError: 'float' object has no attribute 'floor'
 
