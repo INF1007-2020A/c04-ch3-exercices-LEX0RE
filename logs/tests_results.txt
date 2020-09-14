@@ -2,23 +2,29 @@ test_average (__main__.TestExercice) ... ok
 test_square (__main__.TestExercice) ... ok
 test_square_root (__main__.TestExercice) ... ok
 test_to_celsius (__main__.TestExercice) ... ok
-test_to_degrees (__main__.TestExercice) ... ERROR
+test_to_degrees (__main__.TestExercice) ... FAIL
 test_to_farenheit (__main__.TestExercice) ... ok
 test_to_radians (__main__.TestExercice) ... ok
 
 ======================================================================
-ERROR: test_to_degrees (__main__.TestExercice)
+FAIL: test_to_degrees (__main__.TestExercice)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "test_exercice.py", line 80, in test_to_degrees
-    output = [exercice.to_degrees(v) for v in values]
-  File "test_exercice.py", line 80, in <listcomp>
-    output = [exercice.to_degrees(v) for v in values]
-  File "/home/runner/work/c04-ch3-exercices-LEX0RE/c04-ch3-exercices-LEX0RE/exercice.py", line 26, in to_degrees
-    seconde = (math.degrees(angle_rads) - minutes).floor(4) * 3600
-AttributeError: 'float' object has no attribute 'floor'
+  File "test_exercice.py", line 86, in test_to_degrees
+    'Mauvais calcul de radians -> degres'
+AssertionError: Lists differ: [(114, 35, 286529), (-229, -10, -789059), ([31 chars]623)] != [(79.0980174562859, 5.881047377154118, 29.6[197 chars]998)]
+
+First differing element 0:
+(114, 35, 286529)
+(79.0980174562859, 5.881047377154118, 29.612494192724625)
+
+- [(114, 35, 286529), (-229, -10, -789059), (286, 28, 930524), (234, 20, 771623)]
++ [(79.0980174562859, 5.881047377154118, 29.612494192724625),
++  (-278.1960349125718, 48.23790524569176, 0.7750116145507491),
++  (257.74504364071475, -15.297381557114704, 44.031235481811564),
++  (213.95544569810457, -2.673258113725865, 23.057550624127998)] : Mauvais calcul de radians -> degres
 
 ----------------------------------------------------------------------
 Ran 7 tests in 0.001s
 
-FAILED (errors=1)
+FAILED (failures=1)
